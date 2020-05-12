@@ -85,7 +85,7 @@ public class Home extends Fragment {
                 }
 
                 adapter = new RecyclerViewAdapter(getContext(), list);
-                Collections.reverse(list);
+//                Collections.reverse(list);
                 adapter.notifyDataSetChanged();
                 recyclerView.setAdapter(adapter);
 
