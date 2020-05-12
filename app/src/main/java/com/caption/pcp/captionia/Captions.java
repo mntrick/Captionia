@@ -124,7 +124,7 @@ public class Captions extends AppCompatActivity {
             }
         });
 
-    /*    ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+        ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             public boolean onMove(RecyclerView recyclerView,
                                   RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
 //                    final int fromPos = viewHolder.getAdapterPosition();
@@ -138,10 +138,16 @@ public class Captions extends AppCompatActivity {
                 //Remove swiped item from list and notify the RecyclerView
                // adapter.notifyItemRemoved(viewHolder.getLayoutPosition());
                 Toast.makeText(Captions.this, "Swiped", Toast.LENGTH_SHORT).show();
+                //delete on swipe
+                databaseReference.removeValue();      //but it delete all
+                
+                //delete on swipe
+                
+                
             }
         };
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
-        itemTouchHelper.attachToRecyclerView(recyclerView);    */
+        itemTouchHelper.attachToRecyclerView(recyclerView);   
     }
 
     @Override
